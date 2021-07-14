@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BoardEntity" representedClassName=".BoardEntity" syncable="YES" codeGenerationType="category">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="childNotepad" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NotepadEntity" inverseName="parentBoard" inverseEntity="NotepadEntity"/>
+    </entity>
+    <entity name="NotepadEntity" representedClassName=".NotepadEntity" syncable="YES" codeGenerationType="category">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="parentBoard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BoardEntity" inverseName="childNotepad" inverseEntity="BoardEntity"/>
+    </entity>
+    <elements>
+        <element name="BoardEntity" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="NotepadEntity" positionX="107.0301513671875" positionY="-14.90744018554688" width="128" height="88"/>
+    </elements>
+</model>

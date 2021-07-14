@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ncb-eq-sSR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notepad boards-->
+        <scene sceneID="x0n-C5-ze0">
+            <objects>
+                <tableViewController storyboardIdentifier="TableBoardsViewController" id="Ncb-eq-sSR" customClass="TableBoardsViewController" customModule="Notepad" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iAu-xi-cVL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoardCell" id="Uhs-EV-4nh">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uhs-EV-4nh" id="h1J-ep-XUg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ncb-eq-sSR" id="GEk-kC-Lys"/>
+                            <outlet property="delegate" destination="Ncb-eq-sSR" id="4FB-oW-WgK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Notepad boards" id="gtl-e7-zke">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qaD-mD-x3X">
+                            <connections>
+                                <action selector="newBoardAction:" destination="Ncb-eq-sSR" id="ZC3-86-eCW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BvH-xR-Bfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="67.633928571428569"/>
+        </scene>
+        <!--Board Notepads View Controller-->
+        <scene sceneID="b6V-6d-ocN">
+            <objects>
+                <tableViewController storyboardIdentifier="BoardNotepadsViewController" id="EsX-K9-PFC" customClass="BoardNotepadsViewController" customModule="Notepad" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wlN-Mr-JPU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotepadCell" id="11d-c2-zsf">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="11d-c2-zsf" id="bfe-6e-mdl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EsX-K9-PFC" id="heI-em-z91"/>
+                            <outlet property="delegate" destination="EsX-K9-PFC" id="PjV-Wc-97Z"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Dn-pG-wC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="68"/>
+        </scene>
+        <!--Notepad Editor View Controller-->
+        <scene sceneID="lha-33-wlW">
+            <objects>
+                <viewController storyboardIdentifier="NotepadEditorViewController" id="aDC-ZS-5p7" customClass="NotepadEditorViewController" customModule="Notepad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LRd-vt-EEI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xm4-Lh-aid">
+                                <rect key="frame" x="12" y="46" width="390" height="804"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5y-EO-Hdu">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="746"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXZ-lj-hwJ">
+                                        <rect key="frame" x="0.0" y="762" width="390" height="42"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="CL4-tF-420"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="SAVE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveNotepadAction:" destination="aDC-ZS-5p7" eventType="touchUpInside" id="nDE-vu-afL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Y5y-EO-Hdu" secondAttribute="trailing" id="2dJ-J3-SDi"/>
+                                    <constraint firstItem="mXZ-lj-hwJ" firstAttribute="leading" secondItem="xm4-Lh-aid" secondAttribute="leading" id="9Yp-V5-c1a"/>
+                                    <constraint firstAttribute="bottom" secondItem="mXZ-lj-hwJ" secondAttribute="bottom" id="WL3-Im-l91"/>
+                                    <constraint firstItem="Y5y-EO-Hdu" firstAttribute="top" secondItem="xm4-Lh-aid" secondAttribute="top" id="Xkh-54-2zs"/>
+                                    <constraint firstItem="Y5y-EO-Hdu" firstAttribute="leading" secondItem="xm4-Lh-aid" secondAttribute="leading" id="f4N-4r-XF1"/>
+                                    <constraint firstItem="mXZ-lj-hwJ" firstAttribute="top" secondItem="Y5y-EO-Hdu" secondAttribute="bottom" constant="16" id="hat-Iu-jkU"/>
+                                    <constraint firstAttribute="trailing" secondItem="mXZ-lj-hwJ" secondAttribute="trailing" id="j9Z-xS-M9X"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H4h-92-20e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H4h-92-20e" firstAttribute="bottom" secondItem="xm4-Lh-aid" secondAttribute="bottom" constant="12" id="Gdq-mc-dsS"/>
+                            <constraint firstItem="xm4-Lh-aid" firstAttribute="centerX" secondItem="LRd-vt-EEI" secondAttribute="centerX" id="NXe-JQ-PGc"/>
+                            <constraint firstItem="xm4-Lh-aid" firstAttribute="centerY" secondItem="LRd-vt-EEI" secondAttribute="centerY" id="RBU-nn-5Pk"/>
+                            <constraint firstItem="H4h-92-20e" firstAttribute="trailing" secondItem="xm4-Lh-aid" secondAttribute="trailing" constant="12" id="ZXn-6T-VeS"/>
+                            <constraint firstItem="xm4-Lh-aid" firstAttribute="leading" secondItem="H4h-92-20e" secondAttribute="leading" constant="12" id="zUx-sM-GJj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notepadTextEditor" destination="Y5y-EO-Hdu" id="iUZ-jX-0UB"/>
+                        <outlet property="saveButton" destination="mXZ-lj-hwJ" id="HMe-DE-ecD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PH5-eN-PuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2519" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

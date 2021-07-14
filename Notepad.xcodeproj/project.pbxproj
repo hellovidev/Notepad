@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F1ED62F2698B88200A0CE92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED62E2698B88200A0CE92 /* AppDelegate.swift */; };
+		5F1ED6312698B88200A0CE92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED6302698B88200A0CE92 /* SceneDelegate.swift */; };
+		5F1ED6332698B88200A0CE92 /* TableBoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED6322698B88200A0CE92 /* TableBoardsViewController.swift */; };
+		5F1ED6362698B88200A0CE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1ED6342698B88200A0CE92 /* Main.storyboard */; };
+		5F1ED6392698B88200A0CE92 /* Notepad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED6372698B88200A0CE92 /* Notepad.xcdatamodeld */; };
+		5F1ED63B2698B88600A0CE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1ED63A2698B88600A0CE92 /* Assets.xcassets */; };
+		5F1ED63E2698B88600A0CE92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1ED63C2698B88600A0CE92 /* LaunchScreen.storyboard */; };
+		5F1ED64A2698BCE600A0CE92 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED6492698BCE600A0CE92 /* AppConstants.swift */; };
+		5F1ED6502698C0C900A0CE92 /* BoardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED64F2698C0C900A0CE92 /* BoardEntity.swift */; };
+		5F1ED6522698C22100A0CE92 /* TableBoardsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED6512698C22100A0CE92 /* TableBoardsProtocols.swift */; };
+		5F1ED6542698C2EB00A0CE92 /* TableBoardsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED6532698C2EB00A0CE92 /* TableBoardsRouter.swift */; };
+		5F1ED6562698C46600A0CE92 /* TableBoardsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED6552698C46600A0CE92 /* TableBoardsInteractor.swift */; };
+		5F1ED6582698C4E900A0CE92 /* TableBoardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1ED6572698C4E900A0CE92 /* TableBoardsPresenter.swift */; };
+		5FEACDC6269C636A00C228E8 /* BoardNotepadsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDC5269C636A00C228E8 /* BoardNotepadsRouter.swift */; };
+		5FEACDC8269C638300C228E8 /* BoardNotepadsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDC7269C638300C228E8 /* BoardNotepadsProtocols.swift */; };
+		5FEACDCA269C64D900C228E8 /* NotepadEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDC9269C64D900C228E8 /* NotepadEntity.swift */; };
+		5FEACDCC269C662100C228E8 /* BoardNotepadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDCB269C662100C228E8 /* BoardNotepadsViewController.swift */; };
+		5FEACDCE269C668700C228E8 /* BoardNotepadsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDCD269C668700C228E8 /* BoardNotepadsPresenter.swift */; };
+		5FEACDD0269C669500C228E8 /* BoardNotepadsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDCF269C669500C228E8 /* BoardNotepadsInteractor.swift */; };
+		5FEACDD3269CA5A900C228E8 /* NotepadEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDD2269CA5A900C228E8 /* NotepadEditorViewController.swift */; };
+		5FEACDD5269CA60F00C228E8 /* NotepadEditorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDD4269CA60F00C228E8 /* NotepadEditorRouter.swift */; };
+		5FEACDD7269CA62C00C228E8 /* NotepadEditorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDD6269CA62C00C228E8 /* NotepadEditorPresenter.swift */; };
+		5FEACDD9269CA64E00C228E8 /* NotepadEditorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDD8269CA64E00C228E8 /* NotepadEditorInteractor.swift */; };
+		5FEACDDB269CA66D00C228E8 /* NotepadEditorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEACDDA269CA66D00C228E8 /* NotepadEditorProtocols.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F1ED62B2698B88200A0CE92 /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1ED62E2698B88200A0CE92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5F1ED6302698B88200A0CE92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5F1ED6322698B88200A0CE92 /* TableBoardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBoardsViewController.swift; sourceTree = "<group>"; };
+		5F1ED6352698B88200A0CE92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5F1ED6382698B88200A0CE92 /* Notepad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notepad.xcdatamodel; sourceTree = "<group>"; };
+		5F1ED63A2698B88600A0CE92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F1ED63D2698B88600A0CE92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5F1ED63F2698B88600A0CE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1ED6492698BCE600A0CE92 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		5F1ED64F2698C0C900A0CE92 /* BoardEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardEntity.swift; sourceTree = "<group>"; };
+		5F1ED6512698C22100A0CE92 /* TableBoardsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBoardsProtocols.swift; sourceTree = "<group>"; };
+		5F1ED6532698C2EB00A0CE92 /* TableBoardsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBoardsRouter.swift; sourceTree = "<group>"; };
+		5F1ED6552698C46600A0CE92 /* TableBoardsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBoardsInteractor.swift; sourceTree = "<group>"; };
+		5F1ED6572698C4E900A0CE92 /* TableBoardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBoardsPresenter.swift; sourceTree = "<group>"; };
+		5FEACDC5269C636A00C228E8 /* BoardNotepadsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNotepadsRouter.swift; sourceTree = "<group>"; };
+		5FEACDC7269C638300C228E8 /* BoardNotepadsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNotepadsProtocols.swift; sourceTree = "<group>"; };
+		5FEACDC9269C64D900C228E8 /* NotepadEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadEntity.swift; sourceTree = "<group>"; };
+		5FEACDCB269C662100C228E8 /* BoardNotepadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNotepadsViewController.swift; sourceTree = "<group>"; };
+		5FEACDCD269C668700C228E8 /* BoardNotepadsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNotepadsPresenter.swift; sourceTree = "<group>"; };
+		5FEACDCF269C669500C228E8 /* BoardNotepadsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNotepadsInteractor.swift; sourceTree = "<group>"; };
+		5FEACDD2269CA5A900C228E8 /* NotepadEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadEditorViewController.swift; sourceTree = "<group>"; };
+		5FEACDD4269CA60F00C228E8 /* NotepadEditorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadEditorRouter.swift; sourceTree = "<group>"; };
+		5FEACDD6269CA62C00C228E8 /* NotepadEditorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadEditorPresenter.swift; sourceTree = "<group>"; };
+		5FEACDD8269CA64E00C228E8 /* NotepadEditorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadEditorInteractor.swift; sourceTree = "<group>"; };
+		5FEACDDA269CA66D00C228E8 /* NotepadEditorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadEditorProtocols.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F1ED6282698B88200A0CE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F1ED6222698B88200A0CE92 = {
+			isa = PBXGroup;
+			children = (
+				5F1ED62D2698B88200A0CE92 /* Notepad */,
+				5F1ED62C2698B88200A0CE92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F1ED62C2698B88200A0CE92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED62B2698B88200A0CE92 /* Notepad.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F1ED62D2698B88200A0CE92 /* Notepad */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED64E2698BDAF00A0CE92 /* App UIs */,
+				5F1ED6462698B8BA00A0CE92 /* App Assets */,
+				5F1ED6472698B8C200A0CE92 /* App Settings */,
+				5F1ED6452698B8AA00A0CE92 /* App Modules */,
+				5F1ED6482698B8CD00A0CE92 /* Common Utils */,
+			);
+			path = Notepad;
+			sourceTree = "<group>";
+		};
+		5F1ED6452698B8AA00A0CE92 /* App Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5FEACDD1269C9C9700C228E8 /* Notepad Editor */,
+				5FEACDC4269C633F00C228E8 /* Board Notepads */,
+				5F1ED64D2698BD4F00A0CE92 /* Table Boards */,
+			);
+			path = "App Modules";
+			sourceTree = "<group>";
+		};
+		5F1ED6462698B8BA00A0CE92 /* App Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED63A2698B88600A0CE92 /* Assets.xcassets */,
+			);
+			path = "App Assets";
+			sourceTree = "<group>";
+		};
+		5F1ED6472698B8C200A0CE92 /* App Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED63F2698B88600A0CE92 /* Info.plist */,
+				5F1ED62E2698B88200A0CE92 /* AppDelegate.swift */,
+				5F1ED6302698B88200A0CE92 /* SceneDelegate.swift */,
+			);
+			path = "App Settings";
+			sourceTree = "<group>";
+		};
+		5F1ED6482698B8CD00A0CE92 /* Common Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED64C2698BD4100A0CE92 /* Constants */,
+				5F1ED64B2698BD3500A0CE92 /* Database */,
+			);
+			path = "Common Utils";
+			sourceTree = "<group>";
+		};
+		5F1ED64B2698BD3500A0CE92 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED6372698B88200A0CE92 /* Notepad.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		5F1ED64C2698BD4100A0CE92 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED6492698BCE600A0CE92 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		5F1ED64D2698BD4F00A0CE92 /* Table Boards */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED6512698C22100A0CE92 /* TableBoardsProtocols.swift */,
+				5F1ED6322698B88200A0CE92 /* TableBoardsViewController.swift */,
+				5F1ED6552698C46600A0CE92 /* TableBoardsInteractor.swift */,
+				5F1ED6572698C4E900A0CE92 /* TableBoardsPresenter.swift */,
+				5F1ED64F2698C0C900A0CE92 /* BoardEntity.swift */,
+				5F1ED6532698C2EB00A0CE92 /* TableBoardsRouter.swift */,
+			);
+			path = "Table Boards";
+			sourceTree = "<group>";
+		};
+		5F1ED64E2698BDAF00A0CE92 /* App UIs */ = {
+			isa = PBXGroup;
+			children = (
+				5F1ED6342698B88200A0CE92 /* Main.storyboard */,
+				5F1ED63C2698B88600A0CE92 /* LaunchScreen.storyboard */,
+			);
+			path = "App UIs";
+			sourceTree = "<group>";
+		};
+		5FEACDC4269C633F00C228E8 /* Board Notepads */ = {
+			isa = PBXGroup;
+			children = (
+				5FEACDC7269C638300C228E8 /* BoardNotepadsProtocols.swift */,
+				5FEACDCB269C662100C228E8 /* BoardNotepadsViewController.swift */,
+				5FEACDCF269C669500C228E8 /* BoardNotepadsInteractor.swift */,
+				5FEACDCD269C668700C228E8 /* BoardNotepadsPresenter.swift */,
+				5FEACDC9269C64D900C228E8 /* NotepadEntity.swift */,
+				5FEACDC5269C636A00C228E8 /* BoardNotepadsRouter.swift */,
+			);
+			path = "Board Notepads";
+			sourceTree = "<group>";
+		};
+		5FEACDD1269C9C9700C228E8 /* Notepad Editor */ = {
+			isa = PBXGroup;
+			children = (
+				5FEACDD2269CA5A900C228E8 /* NotepadEditorViewController.swift */,
+				5FEACDD6269CA62C00C228E8 /* NotepadEditorPresenter.swift */,
+				5FEACDD8269CA64E00C228E8 /* NotepadEditorInteractor.swift */,
+				5FEACDD4269CA60F00C228E8 /* NotepadEditorRouter.swift */,
+				5FEACDDA269CA66D00C228E8 /* NotepadEditorProtocols.swift */,
+			);
+			path = "Notepad Editor";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F1ED62A2698B88200A0CE92 /* Notepad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1ED6422698B88600A0CE92 /* Build configuration list for PBXNativeTarget "Notepad" */;
+			buildPhases = (
+				5F1ED6272698B88200A0CE92 /* Sources */,
+				5F1ED6282698B88200A0CE92 /* Frameworks */,
+				5F1ED6292698B88200A0CE92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notepad;
+			productName = Notepad;
+			productReference = 5F1ED62B2698B88200A0CE92 /* Notepad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F1ED6232698B88200A0CE92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					5F1ED62A2698B88200A0CE92 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 5F1ED6262698B88200A0CE92 /* Build configuration list for PBXProject "Notepad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F1ED6222698B88200A0CE92;
+			productRefGroup = 5F1ED62C2698B88200A0CE92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F1ED62A2698B88200A0CE92 /* Notepad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F1ED6292698B88200A0CE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1ED63E2698B88600A0CE92 /* LaunchScreen.storyboard in Resources */,
+				5F1ED63B2698B88600A0CE92 /* Assets.xcassets in Resources */,
+				5F1ED6362698B88200A0CE92 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F1ED6272698B88200A0CE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1ED6332698B88200A0CE92 /* TableBoardsViewController.swift in Sources */,
+				5F1ED62F2698B88200A0CE92 /* AppDelegate.swift in Sources */,
+				5FEACDC6269C636A00C228E8 /* BoardNotepadsRouter.swift in Sources */,
+				5F1ED6312698B88200A0CE92 /* SceneDelegate.swift in Sources */,
+				5F1ED6502698C0C900A0CE92 /* BoardEntity.swift in Sources */,
+				5FEACDD9269CA64E00C228E8 /* NotepadEditorInteractor.swift in Sources */,
+				5F1ED6392698B88200A0CE92 /* Notepad.xcdatamodeld in Sources */,
+				5FEACDD7269CA62C00C228E8 /* NotepadEditorPresenter.swift in Sources */,
+				5FEACDCA269C64D900C228E8 /* NotepadEntity.swift in Sources */,
+				5FEACDC8269C638300C228E8 /* BoardNotepadsProtocols.swift in Sources */,
+				5F1ED64A2698BCE600A0CE92 /* AppConstants.swift in Sources */,
+				5FEACDD0269C669500C228E8 /* BoardNotepadsInteractor.swift in Sources */,
+				5FEACDCE269C668700C228E8 /* BoardNotepadsPresenter.swift in Sources */,
+				5FEACDD5269CA60F00C228E8 /* NotepadEditorRouter.swift in Sources */,
+				5F1ED6582698C4E900A0CE92 /* TableBoardsPresenter.swift in Sources */,
+				5F1ED6542698C2EB00A0CE92 /* TableBoardsRouter.swift in Sources */,
+				5FEACDDB269CA66D00C228E8 /* NotepadEditorProtocols.swift in Sources */,
+				5FEACDCC269C662100C228E8 /* BoardNotepadsViewController.swift in Sources */,
+				5F1ED6562698C46600A0CE92 /* TableBoardsInteractor.swift in Sources */,
+				5FEACDD3269CA5A900C228E8 /* NotepadEditorViewController.swift in Sources */,
+				5F1ED6522698C22100A0CE92 /* TableBoardsProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5F1ED6342698B88200A0CE92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1ED6352698B88200A0CE92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5F1ED63C2698B88600A0CE92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1ED63D2698B88600A0CE92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F1ED6402698B88600A0CE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5F1ED6412698B88600A0CE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F1ED6432698B88600A0CE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z28LM9PLJM;
+				INFOPLIST_FILE = "Notepad/App Settings/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hellovidev.Notepad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5F1ED6442698B88600A0CE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z28LM9PLJM;
+				INFOPLIST_FILE = "Notepad/App Settings/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hellovidev.Notepad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F1ED6262698B88200A0CE92 /* Build configuration list for PBXProject "Notepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1ED6402698B88600A0CE92 /* Debug */,
+				5F1ED6412698B88600A0CE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1ED6422698B88600A0CE92 /* Build configuration list for PBXNativeTarget "Notepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1ED6432698B88600A0CE92 /* Debug */,
+				5F1ED6442698B88600A0CE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5F1ED6372698B88200A0CE92 /* Notepad.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5F1ED6382698B88200A0CE92 /* Notepad.xcdatamodel */,
+			);
+			currentVersion = 5F1ED6382698B88200A0CE92 /* Notepad.xcdatamodel */;
+			path = Notepad.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5F1ED6232698B88200A0CE92 /* Project object */;
+}
