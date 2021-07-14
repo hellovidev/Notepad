@@ -17,7 +17,7 @@ class NotepadEditorPresenter: ViewToPresenterNotepadEditorProtocol {
         self.interactor?.fetchNotepadFromLocalDatabase(context: context)
     }
     
-    func pushNotepadToLocalDatabase(context: NSManagedObjectContext) {
+    func pushNotepadToLocalDatabase(for selected: BoardEntity, context: NSManagedObjectContext) {
         self.interactor?.fetchNotepadFromLocalDatabase(context: context)
     }
 }

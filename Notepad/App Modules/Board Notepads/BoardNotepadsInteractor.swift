@@ -12,15 +12,6 @@ class BoardNotepadsInteractor: PresenterToInteractorBoardNotepadsProtocol {
     var presenter: InteractorToPresenterBoardNotepadsProtocol?
     
     func fetchNotepadsFromLocalDatabase(context: NSManagedObjectContext) {
-        do {
-            try context.save()
-            self.presenter?.pushNotepadsRequestSuccess()
-        } catch {
-            self.presenter?.pushNotepadsRequestFailed()
-        }
-    }
-    
-    func pushNotepadsToLocalDatabase(context: NSManagedObjectContext) {
         let request: NSFetchRequest<NotepadEntity> = NotepadEntity.fetchRequest()
         
         do {
@@ -28,6 +19,15 @@ class BoardNotepadsInteractor: PresenterToInteractorBoardNotepadsProtocol {
             self.presenter?.fetchNotepadsRequestSuccess(for: notepads)
         } catch {
             self.presenter?.fetchNotepadsRequestFailed()
+        }
+    }
+    
+    func pushNotepadsToLocalDatabase(context: NSManagedObjectContext) {
+        do {
+            try context.save()
+            self.presenter?.pushNotepadsRequestSuccess()
+        } catch {
+            self.presenter?.pushNotepadsRequestFailed()
         }
     }
 }

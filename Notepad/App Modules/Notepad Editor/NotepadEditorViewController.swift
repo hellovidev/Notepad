@@ -9,10 +9,10 @@ import UIKit
 
 class NotepadEditorViewController: UIViewController {
     private let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-    private var notepadCurrent: NotepadEntity = NotepadEntity()
+    private var notepadCurrent: NotepadEntity?
     
     var selectedNotepad: NotepadEntity?
-    var curentBoard: BoardEntity?
+    //var currentBoard: BoardEntity?
     var notepadPresenter: ViewToPresenterNotepadEditorProtocol?
 
     @IBOutlet weak var notepadTextEditor: UITextView!
@@ -27,6 +27,10 @@ class NotepadEditorViewController: UIViewController {
             self.navigationItem.title = "New Notepad"
         }
         self.saveButton.layer.cornerRadius = self.saveButton.frame.size.height / 4
+        
+        if let currentText = self.selectedNotepad?.text {
+            self.notepadTextEditor.text = currentText
+        }
     }
     
     override func viewDidLoad() {
@@ -36,8 +40,10 @@ class NotepadEditorViewController: UIViewController {
     }
     
     @IBAction func saveNotepadAction(_ sender: UIButton) {
-        if let safeContext = self.context {
-            self.notepadPresenter?.pushNotepadToLocalDatabase(context: safeContext)
+        if let safeContext = self.context{//, let board = self.currentBoard {
+            self.notepadCurrent = NotepadEntity(context: safeContext)
+            self.notepadCurrent?.text = self.notepadTextEditor.text
+            self.notepadPresenter?.pushNotepadToLocalDatabase(for: BoardEntity(), context: safeContext)
         }
     }
 }
